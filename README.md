@@ -2,7 +2,7 @@
 
 ![Mental Health](mentalhealth.jpg)
 
-### Table of Contents
+## Table of Contents
 * [Project Overview](#project-overview)
 * [Dataset Description](#dataset-description)
 * [Dataset Insights](#dataset-insights)
@@ -11,14 +11,14 @@
 * [Result](#result)
 * [Key Findings](#key-findings)
 
-### **Project Overview**
+## **Project Overview**
 This project investigates whether studying in a foreign country affects students' mental health, using data from a Japanese international university's 2018 survey. The original study concluded that international students face a higher risk of mental health difficulties, with social connectedness and acculturative stress being key predictors of depression.
 
 Using **PostgreSQL**, this analysis aims to:
 - Explore patterns in mental health scores of international students.
 - Determine if the **length of stay** impacts mental health outcomes.
 
-### **Dataset Description**
+## **Dataset Description**
 The dataset contains information from both international and domestic students, focusing on mental health metrics. Below are the key fields:
 
 | **Field Name** | **Description** |
@@ -33,7 +33,7 @@ The dataset contains information from both international and domestic students, 
 | `tosc`          | Social connectedness score (SCS test) |
 | `toas`          | Acculturative stress score (ASISS test) |
 
-#### **Dataset Insights:**
+## **Dataset Insights:**
 - The dataset includes numerical scores for depression (PHQ-9), social connectedness (SCS), and acculturative stress (ASISS).
 - Data covers varying lengths of stay, ages, and language proficiencies.
 - Null or missing values are minimal and have been handled appropriately.
@@ -41,7 +41,7 @@ The dataset contains information from both international and domestic students, 
 - **International Students Analyzed:** 268
 - **Length of Stay (Years):** 1–10
 
-### **Objective**
+## **Objective**
 Generate a table with the following specifications:
 - **Columns:** `stay`, `count_int`, `average_phq`, `average_scs`, `average_as`
 - **Details:**
@@ -58,7 +58,7 @@ Additionally:
 - Identify anomalies and significant patterns.
 - Validate findings using statistical analysis.
 
-### **SQL Query**
+## **SQL Query**
 
 ```sql
 SELECT stay, 
@@ -72,9 +72,7 @@ GROUP BY stay
 ORDER BY stay DESC;
 ```
 
-### **Result**
-
-This table displays the data with the following columns: `stay`, `count_int`, `average_phq`, `average_scs`, and `average_as`.
+## **Result**
 
 | stay | count_int | average_phq | average_scs | average_as |
 |------|-----------|-------------|-------------|------------|
@@ -88,7 +86,7 @@ This table displays the data with the following columns: `stay`, `count_int`, `a
 | 2    | 39        | 8.28        | 37.08       | 77.67      |
 | 1    | 95        | 7.48        | 38.11       | 72.8       |
 
-### **Key Findings**
+## **Key Findings**
 1. **Depression Trends (PHQ-9 Scores):**
    - Higher depression scores are observed in shorter stays.
    - Students with longer stays tend to show lower average depression scores.
