@@ -1,5 +1,7 @@
 # Student Mental Health Analysis
 
+![Mental Health](mentalhealth.jpg)
+
 ### Table of Contents
 * [Project Overview](#project-overview)
 * [Dataset Description](#dataset-description)
