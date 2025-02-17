@@ -1,4 +1,4 @@
-# Student Mental Health Analysis using SQL
+# Student Mental Health Analysis
 
 ![Mental Health](mentalhealth.jpg)
 
